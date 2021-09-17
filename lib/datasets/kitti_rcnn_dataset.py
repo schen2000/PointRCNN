@@ -120,6 +120,7 @@ class KittiRCNNDataset(KittiDataset):
         else:
             label_file = os.path.join(self.aug_label_dir, '%06d.txt' % idx)
 
+        #print("dbg: label_file="+label_file)
         assert os.path.exists(label_file)
         return kitti_utils.get_objects_from_label(label_file)
 
